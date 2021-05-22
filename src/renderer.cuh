@@ -16,7 +16,7 @@
 
 #include "image.cuh"
 #include "deviceImage.cuh"
-#include "scene.cuh"
+#include "scene.h"
 #include "deviceScene.cuh"
 #include "camera.cuh"
 
@@ -24,6 +24,8 @@
 
 #include "JSON.h"
 #include "JSONValue.h"
+
+namespace crt {
 
 class DeviceRenderer;
 
@@ -55,5 +57,7 @@ class Renderer {
 
 __global__ void globalRenderSingleThreadet( DeviceRenderer * renderer);
 __global__ void globalRender( DeviceRenderer * renderer);
+
+};
 
 #endif

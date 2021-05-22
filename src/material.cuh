@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+namespace crt {
 class Material {
   public:
     Material ( float3 _color, float _diffuse, float _reflection, float _refraction, float _refractionIndex, float _emission);
@@ -24,6 +25,7 @@ class Material {
     float refractionIndex;
 
     float emission;
+};
 };
 
 #endif

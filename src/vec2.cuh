@@ -8,6 +8,7 @@
 
 #include "util.cuh"
 
+namespace crt {
 struct vec2 {
   
   __host__ __device__ vec2();
@@ -40,4 +41,5 @@ struct vec2 {
 
 };
 
+};
 #endif //_VEC2_

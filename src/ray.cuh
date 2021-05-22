@@ -4,6 +4,7 @@
 #include "vec3.cuh"
 #include <float.h>
 
+namespace crt {
 struct Ray {
     __host__ __device__ Ray( vec3 _position, vec3 _direction);
     __host__ __device__ Ray( vec3 _position, vec3 _direction, float _t);
@@ -23,5 +24,5 @@ struct Ray {
     vec3 direction;
     float t;
 };
-
+};
 #endif

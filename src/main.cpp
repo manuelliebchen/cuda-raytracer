@@ -1,10 +1,15 @@
-#include "main.cuh"
 #include <chrono>
+#include <iostream>
+#include <string>
 
-int main (int argc, char ** argv) {
-  Renderer renderer;
+#include "renderer.cuh"
+
+int
+main(int argc, char** argv)
+{
+  crt::Renderer renderer;
   std::cout << "Reading Scene File: " << argv[1] << std::endl;
-  renderer.readeSceneFile( argv[1]);
+  renderer.readeSceneFile(argv[1]);
 
 #if 0 // DEVICE SINGLE THREAD
   std::cout << "Running on Device, Single Thread." << std::endl;
@@ -30,8 +35,9 @@ int main (int argc, char ** argv) {
   std::chrono::duration<double> time_device = end_device - start_device;
   std::cout << "With Copy it took: " << time_device.count() << "s" << std::endl;
 
-  std::cout << "Writing Image to " << argv[2] << "device_render.png" << std::endl;
-  renderer.writeImage( std::string(argv[2]) + "device_render.png" );
+  std::cout << "Writing Image to " << argv[2] << "device_render.png"
+            << std::endl;
+  renderer.writeImage(std::string(argv[2]) + "device_render.png");
 #endif
 
 #if 0 // HOST
@@ -47,5 +53,4 @@ int main (int argc, char ** argv) {
   std::cout << "Writing Image to " << argv[2] << "host_render.png" << std::endl;
   renderer.writeImage( std::string(argv[2]) + "host_render.png" );
 #endif
-
 };

@@ -6,8 +6,10 @@
 #include "util.cuh"
 #include "ray.cuh"
 
+#include <cuda.h>
 #include <iostream>
 
+namespace crt {
 class Camera {
   public:
     Camera( vec3 position, vec3 direction);
@@ -22,5 +24,5 @@ class Camera {
     vec3 position;
     vec3 direction;
 };
-
+};
 #endif

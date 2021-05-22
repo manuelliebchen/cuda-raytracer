@@ -1,16 +1,16 @@
 #ifndef _VEC3_
 #define _VEC3_
 
-#include <cuda.h>
-#include <cuda_runtime.h>
-
-#include <thrust/random.h>
+#include <iostream>
 
 #include "JSONValue.h"
 
 #include "util.cuh"
 
+namespace crt {
 struct vec3 {
+
+  float x, y, z;
 
   __host__ __device__ vec3();
   __host__ __device__ vec3( float _x, float _y, float _z);
@@ -19,10 +19,6 @@ struct vec3 {
   __host__ __device__ vec3( const vec3& other);
   __host__ __device__ vec3 operator= ( const vec3& rhs);
   __host__ __device__ ~vec3();
-
-  float x;
-  float y;
-  float z;
 
   __host__ __device__ vec3 operator+ ( const vec3& rhs) const;
   __host__ __device__ vec3 operator+= ( const vec3& rhs);
@@ -53,5 +49,5 @@ struct vec3 {
 };
 
 std::ostream& operator << (std::ostream& os, const vec3& vec);
-
+};
 #endif //_VEC3_

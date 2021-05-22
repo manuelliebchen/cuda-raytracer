@@ -8,12 +8,13 @@
 
 #include "material.cuh"
 
-#include "scene.cuh"
+#include "scene.h"
 
 #include "object.cuh"
 #include "sphere.cuh"
 #include "plane.cuh"
 
+namespace crt {
 class Scene;
 
 class DeviceScene {
@@ -45,5 +46,5 @@ class DeviceScene {
     Material * deviceMaterials;
     size_t numMaterials;
 };
-
+};
 #endif //_DEVICE_SCENE_

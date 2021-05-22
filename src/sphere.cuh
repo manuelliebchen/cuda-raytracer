@@ -7,6 +7,7 @@
 
 #include <iostream>
 
+namespace crt {
 class Sphere : public Object {
   public:
     Sphere( vec3 _position, size_t _materialfloat, float _radius);
@@ -18,5 +19,5 @@ class Sphere : public Object {
   private:
     float radius;
 };
-
+};
 #endif

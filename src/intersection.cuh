@@ -5,6 +5,7 @@
 #include "object.cuh"
 #include "ray.cuh"
 
+namespace crt {
 class Object;
 
 struct Intersection {
@@ -28,5 +29,5 @@ struct Intersection {
     vec3 reflection;
     size_t materialIndex;
 };
-
+};
 #endif

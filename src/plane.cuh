@@ -8,6 +8,7 @@
 
 #include <iostream>
 
+namespace crt {
 class Plane : public Object {
   public:
     Plane( vec3 _position, size_t _materialfloat, vec3 _uAxie, vec3 _vAxie);
@@ -20,5 +21,5 @@ class Plane : public Object {
     vec3 uAxie;
     vec3 vAxie;
 };
-
+};
 #endif

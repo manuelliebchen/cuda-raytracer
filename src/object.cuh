@@ -7,6 +7,7 @@
 #include "ray.cuh"
 #include "material.cuh"
 
+namespace crt {
 class Intersection;
 
 class Object {
@@ -22,6 +23,7 @@ class Object {
 
     vec3 position;
     size_t material;
+};
 };
 
 #endif

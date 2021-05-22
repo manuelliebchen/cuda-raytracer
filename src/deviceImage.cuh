@@ -8,6 +8,7 @@
 #include "image.cuh"
 #include "util.cuh"
 
+namespace crt {
 class Image;
 
 class DeviceImage {
@@ -34,5 +35,5 @@ class DeviceImage {
 
     unsigned char * deviceData;
 };
-
+};
 #endif //_DEVICE_IMAGE_

@@ -12,6 +12,7 @@
 #define PNG_DEBUG 3
 #include <png.h>
 
+namespace crt {
 class DeviceImage;
 
 class Image {
@@ -40,5 +41,5 @@ class Image {
 
     unsigned char * hostData;
 };
-
+};
 #endif
